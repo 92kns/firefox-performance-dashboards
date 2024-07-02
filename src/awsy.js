@@ -97,6 +97,11 @@ export const CONFIG = {
       platforms: ['windows10-64-shippable-qr', 'windows10-64-2004-shippable-qr'],
       categories: DEFAULT_CATEGORIES,
     },
+    win11: {
+      label: 'Windows 11 64bit',
+      platforms: ['windows11-64-shippable-qr'],
+      categories: DEFAULT_CATEGORIES,
+    },
   },
 };
 
