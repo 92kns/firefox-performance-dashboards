@@ -16,33 +16,24 @@ const PALETTE = {
   yellow: '#ebc23f',
   violet: '#a66e97',
   pink: '#fe939e',
+  cyan: '#00FFFF',
 };
 
 export const AWFY_BENCHMARKS = {
   'speedometer-android': {
     compare: {
-      'chrome-m': {
-        color: PALETTE.blue,
+      'cstm-car-m': {
+        color: PALETTE.cyan,
         label: 'Chrome',
         frameworkId: BROWSERTIME_FRAMEWORK_ID,
         suite: 'speedometer',
         option: 'opt',
-        application: 'chrome-m',
+        application: 'cstm-car-m',
         project: PROJECT,
-      },
-      geckoview: {
-        color: PALETTE.indigo,
-        label: 'GeckoView',
-        frameworkId: BROWSERTIME_FRAMEWORK_ID,
-        suite: 'speedometer',
-        option: 'opt',
-        application: 'geckoview',
-        project: ALT_PROJECT,
-        extraOptions: ['webrender'],
       },
       fenix: {
         color: PALETTE.orange,
-        label: 'Fenix',
+        label: 'Firefox',
         frameworkId: BROWSERTIME_FRAMEWORK_ID,
         suite: 'speedometer',
         option: 'opt',
@@ -55,28 +46,18 @@ export const AWFY_BENCHMARKS = {
   },
   'speedometer3-android': {
     compare: {
-      'chrome-m': {
-        color: PALETTE.blue,
+      'cstm-car-m': {
+        color: PALETTE.cyan,
         label: 'Chrome',
         frameworkId: BROWSERTIME_FRAMEWORK_ID,
         suite: 'speedometer3',
         option: 'opt',
-        application: 'chrome-m',
+        application: 'cstm-car-m',
         project: PROJECT,
-      },
-      geckoview: {
-        color: PALETTE.indigo,
-        label: 'GeckoView',
-        frameworkId: BROWSERTIME_FRAMEWORK_ID,
-        suite: 'speedometer3',
-        option: 'opt',
-        application: 'geckoview',
-        project: ALT_PROJECT,
-        extraOptions: ['webrender'],
       },
       fenix: {
         color: PALETTE.orange,
-        label: 'Fenix',
+        label: 'Firefox',
         frameworkId: BROWSERTIME_FRAMEWORK_ID,
         suite: 'speedometer3',
         option: 'opt',
@@ -102,14 +83,9 @@ const DESKTOP_FIREFOX_APPS = {
 const DESKTOP_APPS = {
   ...DESKTOP_FIREFOX_APPS,
   chrome: {
-    name: 'chrome',
+    name: 'custom-car',
     label: 'Chrome',
-    color: PALETTE.blue,
-  },
-  safari: {
-    name: 'safari',
-    label: 'Safari',
-    color: PALETTE.yellow,
+    color: PALETTE.cyan,
   },
   safari_tp: {
     name: 'safari-tp',
@@ -404,10 +380,10 @@ Object.entries(SITES).forEach(([siteKey, siteLabel]) => {
 });
 
 const MOBILE_APPS = {
-  'chrome-m': {
-    name: 'chrome-m',
+  'cstm-car-m': {
+    name: 'cstm-car-m',
     label: 'Chrome',
-    color: PALETTE.blue,
+    color: PALETTE.cyan,
   },
   fenix: {
     name: 'fenix',
@@ -420,20 +396,6 @@ const MOBILE_APPS = {
     name: 'fenix',
     label: 'Fenix-fission',
     color: PALETTE.emerald,
-    project: PROJECT,
-    extraOptions: ['webrender', 'fission'],
-  },
-  geckoview: {
-    name: 'geckoview',
-    label: 'GeckoView-nofis',
-    color: PALETTE.indigo,
-    project: ALT_PROJECT,
-    extraOptions: ['webrender'],
-  },
-  'geckoview-fission': {
-    name: 'geckoview',
-    label: 'GeckoView-fission',
-    color: PALETTE.red,
     project: PROJECT,
     extraOptions: ['webrender', 'fission'],
   },
